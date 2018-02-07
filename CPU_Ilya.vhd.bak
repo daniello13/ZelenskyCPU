@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+entity CPU_Ilya is
+	port(
+		A, B, C : in std_logic_vector(7 downto 0);
+		RES_addAandB : out std_logic_vector(7 downto 0);
+		RES_addBandC : out std_logic_vector(7 downto 0);
+		RES_ABmoreBC :out std_logic;
+		);
+	end entity;
+architecture behaviour of CPU_Ilya is
+	begin
+	process(A, B) is
+		begin
+		RES_addAandB <= A + B;
+	end process;
+end architecture;
